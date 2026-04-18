@@ -22,6 +22,7 @@ To learn more about the compiler's internal design, see the
 [documentation index](/docs/README.md).
 
 - [Contributing to Swift](#contributing-to-swift)
+- [Where to Contribute](#where-to-contribute)
 - [Getting Started](#getting-started)
   - [Swift Toolchains](#swift-toolchains)
   - [Build Failures](#build-failures)
@@ -47,6 +48,19 @@ To give clarity of what is expected of our members, Swift has adopted the
 code of conduct defined by the Contributor Covenant. This document is used
 across many open source communities, and we think it articulates our values
 well. For more, see the [Code of Conduct](https://swift.org/code-of-conduct/).
+
+## Where to Contribute
+
+- **Compiler**: `lib/`, `include/`, `SwiftCompilerSources/` and
+  language-focused tests under `test/`.
+- **Standard library and runtime**: `stdlib/` and `Runtimes/`.
+- **Tools and developer workflow**: `tools/` and `utils/`.
+- **Tests and validation**: `test/`, `validation-test/`, and `unittests/`.
+- **Documentation**: `docs/`, `userdocs/`, and top-level guides like this
+  `README.md`.
+
+If you are new to the repository, start with the
+[Contributor Quickstart](/docs/HowToGuides/ContributorQuickstart.md).
 
 ## Getting Started
 

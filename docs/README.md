@@ -30,6 +30,8 @@ to ask for help!
 
 ## Contributing
 
+- [HowToGuides/ContributorQuickstart.md](/docs/HowToGuides/ContributorQuickstart.md):
+  A minimal first-day path for making and submitting a contribution.
 - [FirstPullRequest.md](/docs/HowToGuides/FirstPullRequest.md):
   Describes how to submit your first pull request. This is the place to start
   if you're new to the project!
@@ -37,6 +39,10 @@ to ask for help!
   Describes how different branches are setup and what the automerger does.
 - [ContinuousIntegration.md](/docs/ContinuousIntegration.md):
   Describes the continuous integration setup, including the `@swift_ci` bot.
+- [DocumentationFreshness.md](/docs/DocumentationFreshness.md):
+  Defines ownership and cadence for keeping contributor-critical docs up to date.
+- [CITestHealth.md](/docs/CITestHealth.md):
+  Defines flaky-test and CI performance trend tracking, triage, and prioritization.
 - [DebuggingTheCompiler.md](/docs/DebuggingTheCompiler.md):
   Describes a variety of techniques for debugging.
 - [FAQ.md](/docs/HowToGuides/FAQ.md):

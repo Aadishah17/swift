@@ -20,6 +20,7 @@
     - [Testing Compiler Performance](#testing-compiler-performance)
     - [Swift Community Hosted CI Pull Request Testing](#swift-community-hosted-ci-pull-request-testing)
 - [Cross Repository Testing](#cross-repository-testing)
+- [CI Health and Flaky Test Prioritization](#ci-health-and-flaky-test-prioritization)
 - [ci.swift.org bots](#ciswiftorg-bots)
 
 
@@ -282,6 +283,17 @@ apple/swift-lldb#48
 
 4. Watch the public incremental build on [ci.swift.org](https://ci.swift.org/) to make sure that you did not make any mistakes. It should complete within 30-40 minutes depending on what else was being committed in the mean time.
 
+## CI Health and Flaky Test Prioritization
+
+For a lightweight process to track flaky tests and CI performance trends, see
+[CITestHealth.md](/docs/CITestHealth.md).
+
+Use that guide to:
+
+1. Open standardized flaky-test issues.
+2. Label by owning area (`area/*`) and tests.
+3. Prioritize the top flaky suites regularly for stabilization work.
+
 ### Swift Community Hosted CI Pull Request Testing
 
 Currently, supported pull request testing triggers:
@@ -301,6 +313,4 @@ FIXME: FILL ME IN!
 3. @swift-ci pull request testing becomes less effective since one can not perform a test and one must reason about the source of a given failure.
 
 <a name="footnote-2">[2]</a> This is due to unrelated issues relating to running lldb tests on macOS.
-
-
 

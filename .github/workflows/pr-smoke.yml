@@ -1,0 +1,45 @@
+name: PR Smoke Checks
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint-and-smoke:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install lint dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install flake8 flake8-import-order yamllint
+
+      - name: Lint Python
+        run: python3 utils/python_lint.py
+
+      - name: Lint workflow YAML
+        run: yamllint .github/workflows
+
+      - name: Lint markdown
+        uses: DavidAnson/markdownlint-cli2-action@v18
+        with:
+          globs: |
+            README.md
+            docs/**/*.md
+            CONTRIBUTING.md
+
+      - name: Run smoke utility tests
+        run: |
+          python3 utils/update_checkout/run_tests.py
+          python3 utils/swift_build_support/run_tests.py

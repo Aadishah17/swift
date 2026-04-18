@@ -1,0 +1,31 @@
+- name: good first issue
+  color: "7057ff"
+  description: Good candidate for new contributors.
+
+- name: needs-info
+  color: "d876e3"
+  description: Waiting for additional information from the reporter.
+
+- name: stale
+  color: "ededed"
+  description: Marked stale due to inactivity.
+
+- name: area/compiler
+  color: "0e8a16"
+  description: Compiler implementation and diagnostics.
+
+- name: area/stdlib
+  color: "1d76db"
+  description: Standard library and overlays.
+
+- name: area/docs
+  color: "5319e7"
+  description: Documentation and contributor guides.
+
+- name: area/tests
+  color: "fbca04"
+  description: Test suites and test infrastructure.
+
+- name: area/tools
+  color: "c2e0c6"
+  description: Tools and development scripts.

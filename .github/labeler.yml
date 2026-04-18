@@ -1,0 +1,33 @@
+area/compiler:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "lib/**"
+          - "include/**"
+          - "SwiftCompilerSources/**"
+
+area/stdlib:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "stdlib/**"
+          - "Runtimes/**"
+
+area/docs:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "docs/**"
+          - "userdocs/**"
+          - "README.md"
+          - "CONTRIBUTING.md"
+
+area/tests:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "test/**"
+          - "validation-test/**"
+          - "unittests/**"
+
+area/tools:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "tools/**"
+          - "utils/**"

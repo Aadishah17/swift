@@ -1,0 +1,50 @@
+name: Flaky test report
+description: Track an intermittently failing test for stabilization work.
+title: "[Flaky Test]: "
+labels:
+  - area/tests
+body:
+  - type: input
+    id: test-name
+    attributes:
+      label: Test path or name
+      description: Include the fully qualified test path/name when possible.
+      placeholder: test/SomeSuite/some-test.swift
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - macOS
+        - Linux
+        - Windows
+        - Multiple
+        - Unknown
+    validations:
+      required: true
+
+  - type: textarea
+    id: signal
+    attributes:
+      label: Failure signal and frequency
+      description: Describe observed failures and rough frequency.
+      placeholder: Fails ~1/20 runs in smoke testing with timeout in ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro-links
+    attributes:
+      label: CI links / reproduction references
+      description: Add links to failing runs, logs, or PRs.
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Suspected owner area, known good range, or relevant history.
